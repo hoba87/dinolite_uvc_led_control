@@ -32,6 +32,12 @@ class DinoLiteUVCControl:
                     from .devices import device0980
                     tmpObj = device0980.Device0980(self)
                     self.ourDevices.append(tmpObj)
+                if "0970" in idlist[1]:
+                    self.log("Found AnMo device 0970")
+                    # initialize 0970, 2mp shiny microscope
+                    from .devices import device0970
+                    tmpObj = device0970.Device0970(self)
+                    self.ourDevices.append(tmpObj)
                 if "0890" in idlist[1]:
                     self.log("Found AnMo device 0890")
                     # initialize 0890, 1.xMP flat color microscope
